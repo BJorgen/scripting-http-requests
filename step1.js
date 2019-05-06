@@ -7,10 +7,10 @@ function getAndPrintHTMLChunks () {
       path: '/http-examples/step1.html'
     };
 
-    https.get(requestOptions, function (response) {
+    https.get(requestOptions, response => {
         
         // log chunck of data to the console as they are recieved
-        response.on('data', function (chunk) {
+        response.on('data', chunk => {
             console.log(chunk + '\n')
         });
 
